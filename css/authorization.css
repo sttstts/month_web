@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    max-height: 100vh; 
+    overflow: hidden;
+}
+
+
+#title {
+    text-align: center;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title h1 {
+    margin: 0;
+}
+
+#title img {
+    max-width: 200px; 
+}
+
+section#authentication {
+    padding: 1rem 0.5rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem; 
+}
+
+.auth-form,
+.registration-form {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 45%;
+    max-width: 400px; 
+    margin-bottom: 2rem; 
+}
+
+.auth-form h2,
+.registration-form h2 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="password"],
+.registration-form input[type="text"],
+.registration-form input[type="password"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.auth-form input[type="submit"],
+.registration-form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.auth-form input[type="submit"]:hover,
+.registration-form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0.1rem 0; 
+    position: fixed;
+    width: 100%;
+    bottom: -1.5rem; 
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .auth-form,
+    .registration-form {
+        width: 90%;
+    }
+}
