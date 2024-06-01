@@ -64,18 +64,66 @@ body {
     background-color: #F4E3D2; 
 }
 
-.courses-heading {
-    font-size: 40px;
-    text-align: center;
-    margin-top: 50px; 
+main {
+    text-align: left; 
+    padding: 50px 90px;
+    overflow: hidden;
+}
+
+main h1 {
+    color: black; 
+    font-size: 72px; 
+}
+
+main p {
+    color: black; 
+    font-size: 48px; 
+    margin-top: 100px; 
+    margin-left: 180px;
+}
+
+main button {
+    background-color: #FD7B03; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    font-size: 48px; 
+    border-radius: 25px;
+    cursor: pointer;
+
+    margin-left: 110px;
+}
+
+button a {
+    text-decoration: none;
+    color: inherit; 
+    cursor: pointer; 
 }
 
 
+main button:hover {
+    background-color: #FFA74E; 
+}
+
+.content {
+    display: flex; 
+    justify-content: space-between; 
+}
+
+.text {
+    flex: 1;
+}
+
+.image {
+    float: right;
+    margin-top: -500px;
+}
+
 footer {
-    position: fixed; 
-    bottom: 0; 
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    text-align: center; 
+    text-align: center;
     padding: 10px 0;
     background: linear-gradient(to right, #F3BD91, #E07F6F, #E89378);
     color: black;

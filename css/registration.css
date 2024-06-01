@@ -6,7 +6,7 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-color: #EAE3DC; 
+    background-color: #EAE3DC;
 }
 
 .background-image {
@@ -14,15 +14,15 @@ body {
     top: 50%;
     left: 45%;
     transform: translate(-50%, -50%);
-    max-width: 500%; 
-    max-height: 500%; 
+    max-width: 500%;
+    max-height: 500%;
     width: auto;
     height: auto;
 }
 
 .background-image img {
-    max-width: 904px; 
-    max-height: 904px; 
+    max-width: 904px;
+    max-height: 904px;
     width: auto;
     height: auto;
 }
@@ -30,21 +30,21 @@ body {
 .container {
     position: relative;
     z-index: 1;
-    left: 05%;
+    left: 5%;
     padding: 20px;
     border-radius: 10px;
 }
 
 .logo {
-    width: 300px; 
+    width: 300px;
     height: auto;
-    margin: 0 auto 20px; 
+    margin: 0 auto 20px;
 }
 
 h2 {
     margin-bottom: 20px;
     color: #333;
-    text-align: center; 
+    text-align: center;
 }
 
 .input-group {
@@ -86,8 +86,8 @@ h2 {
 }
 
 .additional-options a {
-    color: #333; 
-    font-weight: bold; 
+    color: #333;
+    font-weight: bold;
     text-decoration: none;
     margin-left: 5px;
 }

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Authorization Page</title>
-    <link rel="stylesheet" href="css/authorization.css">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="css/registration.css">
 </head>
 <body>
     <div class="background-image">
@@ -12,7 +12,7 @@
     </div>
     <div class="container">
         <img src="img/logo 1.png" alt="Logo" class="logo">
-        <h2>Авторизация</h2>
+        <h2>Регистрация</h2>
         <div class="input-group">
             <input type="text" id="username" name="username" placeholder="Логин" required>
         </div>
@@ -20,11 +20,14 @@
             <input type="password" id="password" name="password" placeholder="Пароль" required>
         </div>
         <div class="input-group">
-            <button type="button">Войти</button>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Повтор пароля" required>
+        </div>
+        <div class="input-group">
+            <button type="button">Создать</button>
         </div>
         <div class="additional-options">
-            <span>Нет аккаунта?</span>
-            <a href="registration.html">Зарегистрироваться</a>
+            <span>Уже есть аккаунт?</span>
+            <a href="authorization.html">Авторизоваться</a>
         </div>
     </div>
 </body>
