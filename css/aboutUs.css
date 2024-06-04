@@ -63,27 +63,51 @@ body {
 }
 
 main {
-    padding: 50px px;
+    padding: 5px;
 }
 
 .about-heading,
 .team-heading {
     font-size: 36px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .about-text {
     text-align: left;
     margin-left: 50px;
     margin-right: 50px;
+    font-size: 24px;
 }
 
-.about-text p {
-    color: black;
-    font-size: 18px;
-    margin-bottom: 20px;
-    line-height: 1.6;
+.team-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 50px;
+}
+
+.team-member {
+    background-color: #FFD1B7;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0; 
+    padding: 20px;
+    text-align: center;
+    width: calc(100% - 40px);
+    max-width: 1784px;
+    font-size: 50px; 
+}
+
+.team-member h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 16px;
+    color: #000000;
+    font-size: 24px;
 }
 
 footer {
