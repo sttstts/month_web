@@ -1,4 +1,3 @@
-/* Основные стили */
 header {
     position: relative;
     display: flex;
@@ -100,39 +99,18 @@ footer {
     border-color: #F3BD91;
 }
 
-.duration-container{
+.duration-container,
+.lesson-container {
     display: flex;
     align-items: center;
     margin-bottom: 70px;
-    margin-left: 50px;
+    margin-left: 50px; 
 }
 
-.lesson-container{
-    display: flex;
-    align-items: center;
-    margin-bottom: 70px;
-    margin-left: 50px;
-}
-
-.level-container {
-    display: flex;
-    margin-bottom: 70px;
-    margin-left: 180px; 
-}
-
-.duration-container label{
-    font-size: 32px;
-    margin-right: 100px;
-}
-
+.duration-container label,
 .lesson-container label {
     font-size: 32px;
-    margin-right: 150px;
-}
-
-.level-container label {
-    font-size: 32px;
-    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .duration-card,
@@ -141,16 +119,19 @@ footer {
     border-radius: 10px;
     padding: 20px;
     font-size: 32px;
+    margin-left: 50px; 
 }
 
 .level-container {
     margin-bottom: 30px;
+    display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    margin-left: 50px;
 }
 
 .level-container label {
     font-size: 32px;
-    display: block;
     margin-bottom: 10px;
 }
 
@@ -167,16 +148,92 @@ footer {
     font-size: 28px;
     margin-right: 20px;
     cursor: pointer;
-}
-
-.level-options input[type="radio"] + label {
     padding: 5px 10px;
     border-radius: 25px;
 }
 
-.level-options input[type="radio"]:checked + label {
-    background-color: #F3BD91;
+.level-options #beginner + label {
+    background-color: #99FF75;
     color: black;
 }
 
+.level-options #intermediate + label {
+    background-color: #FED15E;
+    color: black;
+}
 
+.level-options #advanced + label {
+    background-color: #FF6767;
+    color: black;
+}
+
+.level-options input[type="radio"]:checked + label {
+    border: 2px solid black;
+}
+
+.content-container {
+    display: flex;
+}
+
+.left-content {
+    margin-right: 50px; 
+    margin-left: 80px;
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    
+}
+
+
+.image-container{
+    position: absolute;
+    top: 100px; 
+    right: 100px;
+}
+
+.text-container {
+    position: absolute;
+    top: 646px; 
+    right: 250px;
+}
+
+.image-container img {
+    width: 663px;
+    height: 546px;
+}
+
+
+.text-container p {
+    font-size: 24px;
+}
+
+.text-container p span {
+    color: #E18170;
+}
+
+
+.payment-button-container {
+    display: flex;
+    justify-content: flex-start; 
+    margin-top: 30px; 
+    margin-left: 50px; 
+}
+
+.payment-button {
+    background-color: #F3BD91;
+    color: black;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 200px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.payment-button:hover {
+    background-color: #E07F6F;
+}

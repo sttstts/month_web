@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата курса</title>
+    <link rel="stylesheet" href="css/payment.css">
+</head>
+<body>
+    <div class="header-divider"></div>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="img/logo 1.png" alt="Логотип">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Домой</a></li>
+                    <li><a href="courses.html">Курсы</a></li>
+                    <li><a href="aboutUs.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="my_courses.html">Мои курсы</a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="authorization.html">Выйти из аккаунта</a>
+                <img src="img/Rectangle 46.png" alt="Выход">
+            </div>
+        </header>
+        <main>
+            <div class="content-container">
+                <div class="left-content">
+                    <div class="course-info-card">
+                        <p><span class="highlight">Выбранный курс:</span><br> Английский язык</p>
+                        <p><span class="highlight">Время обучения:</span><br> 2 года 3 месяца</p>
+                        <p><span class="highlight">Количество уроков:</span><br> 180</p>
+                        <p><span class="highlight">Уровень языка:</span><br> Продвинутый</p>
+                        <p class="course-cost"><span class="highlight">Полная стоимость обучения:</span><br> 129 000 рублей</p>
+                    </div>
+                </div>
+                <div class="center-content">
+                    <h2>Оплата курса:</h2>
+                    <form>
+                        <input type="text" placeholder="Номер карты">
+                        <input type="text" placeholder="Срок действия">
+                        <input type="text" placeholder="CVV">
+                        <input type="text" placeholder="Email">
+                        <input type="text" placeholder="Номер телефона">
+                        <a href="my_courses.html" class="payment-button">Оплатить</a>
+                    </form>
+                    <div class="certificates">
+                        <img src="img/Rectangle 41.png" alt="Сертификат 1">
+                        <img src="img/Rectangle 42.png" alt="Сертификат 2">
+                    </div>
+                </div>                
+                <div class="right-content">
+                    <h2 style="text-align: center; color: black; margin-top: 20px;">Если возникли проблемы с оплатой,<br>обращайтесь к нам.</h2>
+                    <button class="support-button" onclick="location.href='contacts.html'">Служба поддержки</button>
+                    <img src="img/Rectangle 45.png" alt="Поддержка" style="max-width: 100%; height: auto; margin-top: 20px;">
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>© 2024 TalkTrail</p>
+        </footer>
+    </div>
+</body>
+</html>

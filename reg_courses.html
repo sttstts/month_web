@@ -19,7 +19,7 @@
                     <li><a href="courses.html">Курсы</a></li>
                     <li><a href="aboutUs.html">О нас</a></li>
                     <li><a href="contacts.html">Контакты</a></li>
-                    <li><a href="#">Мои курсы</a></li>
+                    <li><a href="my_courses.html">Мои курсы</a></li>
                 </ul>
             </nav>
             <div class="logout">
@@ -28,33 +28,48 @@
             </div>
         </header>
         <main>
-            <div class="course-selection">
-                <label for="course-select">Выбранный курс:</label>
-                <select name="course" id="course-select">
-                    <option value="english">Английский язык</option>
-                    <option value="french">Французский язык</option>
-                    <option value="spanish">Испанский язык</option>
-                </select>
-            </div>
-            <div class="duration-container">
-                <label>Время обучения:</label>
-                <div class="duration-card">2 года 3 месяца</div>
-            </div>
-            <div class="lesson-container">
-                <label>Количество уроков:</label>
-                <div class="lesson-card">180</div>
-            </div>
-            <div class="level-container">
-                <label for="language-level">Доступные уровни языка:</label>
-                <div class="level-options">
-                    <input type="radio" id="beginner" name="language-level" value="beginner">
-                    <label for="beginner">Лёгкий</label>
-                    <input type="radio" id="intermediate" name="language-level" value="intermediate">
-                    <label for="intermediate">Средний</label>
-                    <input type="radio" id="advanced" name="language-level" value="advanced">
-                    <label for="advanced">Продвинутый</label>
+            <div class="content-container">
+                <div class="left-content">
+                    <div class="course-selection">
+                        <label for="course-select">Выбранный курс:</label>
+                        <select name="course" id="course-select">
+                            <option value="english">Английский язык</option>
+                            <option value="french">Французский язык</option>
+                            <option value="spanish">Испанский язык</option>
+                        </select>
+                    </div>
+                    <div class="duration-container">
+                        <label>Время обучения:</label>
+                        <div class="duration-card">2 года 3 месяца</div>
+                    </div>
+                    <div class="lesson-container">
+                        <label>Количество уроков:</label>
+                        <div class="lesson-card">180</div>
+                    </div>
+                    <div class="level-container">
+                        <label for="language-level">Доступные уровни языка:</label>
+                        <div class="level-options">
+                            <input type="radio" id="beginner" name="language-level" value="beginner">
+                            <label for="beginner">Лёгкий</label>
+                            <input type="radio" id="intermediate" name="language-level" value="intermediate">
+                            <label for="intermediate">Средний</label>
+                            <input type="radio" id="advanced" name="language-level" value="advanced">
+                            <label for="advanced">Продвинутый</label>
+                        </div>
+                    </div>
+                    <div class="payment-button-container">
+                        <a href="payment.html"><button class="payment-button">Приступить к оплате</button></a>
+                    </div>                     
                 </div>
-            </div>                       
+                <div class="right-content">
+                    <div class="image-container">
+                        <img src="img/b28f84c7-c7d0-4fa0-af5f-237b12a918f5.png">
+                    </div>
+                    <div class="text-container">
+                        <p>Стань <span>гражданином мира:</span><br> открой новые горизонты <br> с каждым выученным словом.</p>
+                    </div>
+                </div>
+            </div>
         </main>
         <footer>
             <p>© 2024 TalkTrail</p>
