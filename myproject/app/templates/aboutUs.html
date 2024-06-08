@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/aboutUs.css') }}">
+</head>
+<body>
+    <div class="header-divider"></div>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo 1.png') }}" alt="Your Image">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Домой</a></li>
+                    <li><a href="{{ url_for('courses') }}">Курсы</a></li>
+                    <li><a href="{{ url_for('about_us') }}">О нас</a></li>
+                    <li><a href="{{ url_for('contacts') }}">Контакты</a></li>
+                    <li><a href="{{ url_for('my_courses') }}">Мои курсы</a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="{{ url_for('authorization') }}">Выйти из аккаунта</a>
+                <img src="{{ url_for('static', filename='images/Rectangle 46.png') }}" alt="Your Image">
+            </div>
+        </header>
+        <main>
+            <h1 class="about-heading">О нас:</h1>
+            <div class="about-text">
+                <p>
+                    Мы - команда профессионалов, увлеченных обучением иностранным языкам. Наша миссия - помочь вам достичь ваших целей в изучении языков.
+                </p>
+                <p>
+                    Наша платформа предлагает разнообразные курсы по различным языкам, подходящие для всех уровней, от начинающих до продвинутых.
+                </p>
+            </div>
+            <h1 class="team-heading">Преподавательский состав:</h1>
+            <div class="team-container">
+                <div class="team-member">
+                    <h3>Иван Иванов — преподователь английского языка</h3>
+                    <p>Иван имеет более 10 лет опыта преподавания и множество сертификатов.</p>
+                </div>
+                <div class="team-member">
+                    <h3>Анна Сергеевна — преподователь французского языка</h3>
+                    <p>Анна является носителем языка и имеет диплом преподавателя французского как иностранного.</p>
+                </div>
+                <div class="team-member">
+                    <h3>Мария Петрова — преподователь испанского языка</h3>
+                    <p>Мария жила в Испании 5 лет и имеет степень магистра в области лингвистики.</p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>© 2024 TalkTrail</p>
+        </footer>
+    </div>
+</body>
+</html>

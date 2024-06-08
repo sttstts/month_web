@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация Курса</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reg_courses.css') }}">
+    <script src="{{ url_for('static', filename='js/reg_courses.js') }}"></script>
+</head>
+<body>
+    <div class="header-divider"></div>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo 1.png') }}" alt="Your Image">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Домой</a></li>
+                    <li><a href="{{ url_for('courses') }}">Курсы</a></li>
+                    <li><a href="{{ url_for('about_us') }}">О нас</a></li>
+                    <li><a href="{{ url_for('contacts') }}">Контакты</a></li>
+                    <li><a href="{{ url_for('my_courses') }}">Мои курсы</a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="{{ url_for('authorization') }}">Выйти из аккаунта</a>
+                <img src="{{ url_for('static', filename='images/Rectangle 46.png') }}" alt="Your Image">
+            </div>
+        </header>
+        <main>
+            <div class="content-container">
+                <div class="left-content">
+                    <div class="course-selection">
+                        <label for="course-select">Выбранный курс:</label>
+                        <select name="course" id="course-select">
+                            <option value="Английский язык" {% if course and course[1] == 'Английский язык' %}selected{% endif %}>Английский язык</option>
+                            <option value="Французский язык" {% if course and course[1] == 'Французский язык' %}selected{% endif %}>Французский язык</option>
+                            <option value="Испанский язык" {% if course and course[1] == 'Испанский язык' %}selected{% endif %}>Испанский язык</option>
+                        </select>
+                    </div>
+                    <div class="duration-container">
+                        <label>Время обучения:</label>
+                        <div class="duration-card">{{ course[2] if course else '' }}</div>
+                    </div>
+                    <div class="lesson-container">
+                        <label>Количество уроков:</label>
+                        <div class="lesson-card">{{ course[3] if course else '' }}</div>
+                    </div>
+                    <div class="level-container">
+                        <label for="language-level">Доступные уровни языка:</label>
+                        <div class="level-options">
+                            <input type="radio" id="beginner" name="language-level" value="beginner" {% if course and course[4] == 'beginner' %}checked{% endif %}>
+                            <label for="beginner">Лёгкий</label>
+                            <input type="radio" id="intermediate" name="language-level" value="intermediate" {% if course and course[4] == 'intermediate' %}checked{% endif %}>
+                            <label for="intermediate">Средний</label>
+                            <input type="radio" id="advanced" name="language-level" value="advanced" {% if course and course[4] == 'advanced' %}checked{% endif %}>
+                            <label for="advanced">Продвинутый</label>
+                        </div>
+                    </div>
+                    <div class="payment-button-container">
+                        <a href="#" class="payment-button" onclick="saveSelectionAndRedirect()">Приступить к оплате</a>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <div class="image-container">
+                        <img src="{{ url_for('static', filename='images/b28f84c7-c7d0-4fa0-af5f-237b12a918f5.png') }}" alt="Your Image">
+                    </div>
+                    <div class="text-container">
+                        <p>Стань <span>гражданином мира:</span><br> открой новые горизонты <br> с каждым выученным словом.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>© 2024 TalkTrail</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+<script>
+function saveSelection() {
+    const course = document.getElementById('course-select').value;
+    const level = document.querySelector('input[name="language-level"]:checked').value;
+
+    localStorage.setItem('selectedCourse', course);
+    localStorage.setItem('selectedLevel', level);
+}
+</script>

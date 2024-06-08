@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Домашняя страница</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+    <div class="header-divider"></div>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo 1.png') }}" alt="Your Image">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Домой</a></li>
+                    <li><a href="{{ url_for('courses') }}">Курсы</a></li>
+                    <li><a href="{{ url_for('about_us') }}">О нас</a></li>
+                    <li><a href="{{ url_for('contacts') }}">Контакты</a></li>
+                    <li><a href="{{ url_for('my_courses') }}">Мои курсы</a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="{{ url_for('authorization') }}">Выйти из аккаунта</a>
+                <img src="{{ url_for('static', filename='images/Rectangle 46.png') }}" alt="Your Image">
+            </div>
+        </header>
+        <main>
+            <div>
+            <h1>Изучите <span style="color: #FD7B03;">любой язык</span><br> и начните покорять<br> мир</h1>
+            <p>Начните изучать новое</p>
+            <button><a href="{{ url_for('courses') }}">Выбрать курс для изучения</a></button>
+            <div class="image">
+                <img src="{{ url_for('static', filename='images/Rectangle 57.png') }}" alt="Your Image">
+            </div>
+            </div>
+        </main>
+        <footer>
+            <p>© 2024 TalkTrail</p>
+        </footer>
+    </div>
+</body>
+</html>

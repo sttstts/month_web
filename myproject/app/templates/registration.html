@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/registration.css') }}">
+    <script src="{{ url_for('static', filename='js/registration.js') }}"></script>
+</head>
+<body>
+    <div class="background-image">
+        <img src="{{ url_for('static', filename='images/Rectangle 24.png') }}" alt="Your Image">
+    </div>
+    <div class="container">
+        <img src="{{ url_for('static', filename='images/logo 1.png') }}" alt="Your Image">
+        <h2>Регистрация</h2>
+        <form id="registration-form" action="{{ url_for('register') }}" method="post">
+            <div class="input-group">
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" name="password" placeholder="Пароль" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="confirm-password" name="confirm_password" placeholder="Повтор пароля" required>
+            </div>
+            <div class="input-group">
+                <button type="submit">Создать</button>
+            </div>
+        </form>
+        <div class="additional-options">
+            <span>Уже есть аккаунт?</span>
+            <a href="{{ url_for('authorization') }}">Авторизоваться</a>
+        </div>
+    </div>
+</body>
+</html>

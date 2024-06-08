@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои курсы</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/my_courses.css') }}">
+</head>
+<body>
+    <div class="header-divider"></div>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo 1.png') }}" alt="Your Image">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Домой</a></li>
+                    <li><a href="{{ url_for('courses') }}">Курсы</a></li>
+                    <li><a href="{{ url_for('about_us') }}">О нас</a></li>
+                    <li><a href="{{ url_for('contacts') }}">Контакты</a></li>
+                    <li><a href="{{ url_for('my_courses') }}">Мои курсы</a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="{{ url_for('authorization') }}">Выйти из аккаунта</a>
+                <img src="{{ url_for('static', filename='images/Rectangle 46.png') }}" alt="Your Image">
+            </div>
+        </header>
+        <main>
+            <h1 class="about-heading">Мои курсы:</h1>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+
+            {% if has_courses %}
+                {% for course in user_courses %}
+                    <a href="{{ url_for('lessons', course_id=course[0]) }}" class="course-link">
+                        <div class="course-card">
+                            <div class="course-info">
+                                <h2 class="course-title">{{ course[1] }}</h2>
+                                <p class="course-level">Уровень: {{ translate_level(course[6]) }}</p>
+                                <p class="course-progress">Количество уроков: {{ course[3] }}</p>
+                            </div>
+                            <div class="next-lesson">
+                                <p class="next-lesson-date">Дата следующего урока: {{ next_lesson_date() }}</p>
+                            </div>
+                            <div class="course-flag">
+                                {% if course[0] == 1 %}
+                                    <img src="{{ url_for('static', filename='images/Rectangle 29.png') }}" alt="Английский язык">
+                                {% elif course[0] == 2 %}
+                                    <img src="{{ url_for('static', filename='images/Rectangle 30.png') }}" alt="Французский язык">
+                                {% elif course[0] == 3 %}
+                                    <img src="{{ url_for('static', filename='images/Rectangle 31.png') }}" alt="Итальянский язык">
+                                {% endif %}
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+            {% else %}
+                <p class="no-courses-message">У вас пока нет записей о курсах. Запишитесь на курсы, чтобы начать обучение!</p>
+            {% endif %}
+        </main>
+        <footer>
+            <p>© 2024 TalkTrail</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+<script>
+    function translate_level(level) {
+        // Функция для перевода уровня языка на русский
+        if (level === 'beginner') {
+            return 'Начинающий';
+        } else if (level === 'intermediate') {
+            return 'Средний';
+        } else if (level === 'advanced') {
+            return 'Продвинутый';
+        } else {
+            return level; // Возвращаем исходное значение, если не удалось перевести
+        }
+    }
+
+    function next_lesson_date() {
+        // Функция для определения даты следующего урока (например, через неделю от текущей даты)
+        const now = new Date();
+        const nextWeek = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);
+        return nextWeek.toLocaleDateString('ru-RU');
+    }
+</script>

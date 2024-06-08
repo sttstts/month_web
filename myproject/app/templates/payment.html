@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата курса</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/payment.css') }}">
+    <script src="{{ url_for('static', filename='js/payment.js') }}" defer></script>
+</head>
+<body>
+    <div class="header-divider"></div>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo 1.png') }}" alt="Your Image">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Домой</a></li>
+                    <li><a href="{{ url_for('courses') }}">Курсы</a></li>
+                    <li><a href="{{ url_for('about_us') }}">О нас</a></li>
+                    <li><a href="{{ url_for('contacts') }}">Контакты</a></li>
+                    <li><a href="{{ url_for('my_courses') }}">Мои курсы</a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="{{ url_for('authorization') }}">Выйти из аккаунта</a>
+                <img src="{{ url_for('static', filename='images/Rectangle 46.png') }}" alt="Your Image">
+            </div>
+        </header>
+        <main>
+            <div class="content-container">
+                <div class="left-content">
+                    <div class="course-info-card">
+                        <p><span class="highlight">Выбранный курс:</span><br> <span id="selected-course">Английский язык</span></p>
+                        <p><span class="highlight">Время обучения:</span><br> <span id="course-duration">2 года 3 месяца</span></p>
+                        <p><span class="highlight">Количество уроков:</span><br> <span id="course-lessons">180</span></p>
+                        <p><span class="highlight">Уровень языка:</span><br> <span id="selected-level">Продвинутый</span></p>
+                        <p class="course-cost"><span class="highlight">Полная стоимость обучения:</span><br> <span id="course-cost">129 000 рублей</span></p>
+                    </div>
+                </div>
+                <div class="center-content">
+                    <h2>Оплата курса:</h2>
+                    <form id="payment-form" action="/process_payment" method="POST">
+                        <input type="text" name="card_number" placeholder="Номер карты">
+                        <input type="text" name="expiry_date" placeholder="Срок действия">
+                        <input type="text" name="cvv" placeholder="CVV">
+                        <input type="text" name="email" placeholder="Email">
+                        <input type="text" name="phone_number" placeholder="Номер телефона">
+                        <input type="hidden" id="hidden-selected-course-id" value="Английский язык">
+                        <input type="hidden" id="hidden-selected-level" value="Продвинутый">
+                        <button class="payment-button" type="button" data-my-courses-url="{{ url_for('my_courses') }}">Оплатить</button>
+                    </form>
+                    <input type="hidden" id="payment-url" value="{{ url_for('process_payment') }}">
+                    <div class="certificates">
+                        <img src="{{ url_for('static', filename='images/Rectangle 41.png') }}" alt="Your Image">
+                        <img src="{{ url_for('static', filename='images/Rectangle 42.png') }}" alt="Your Image">
+                    </div>
+                </div>
+                <div class="right-content">
+                    <h2 style="text-align: center; color: black; margin-top: 20px;">Если возникли проблемы с оплатой,<br>обращайтесь к нам.</h2>
+                    <button class="support-button" onclick="window.location.href='{{ url_for('contacts') }}'">Служба поддержки</button>
+                    <img src="{{ url_for('static', filename='images/Rectangle 45.png') }}" alt="Поддержка" style="max-width: 100%; height: auto; margin-top: 20px;">
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>© 2024 TalkTrail</p>
+        </footer>
+    </div>
+</body>
+</html>

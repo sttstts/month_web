@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курсы</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/courses.css') }}">
+</head>
+<body>
+    <div class="header-divider"></div>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo 1.png') }}" alt="Your Image">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Домой</a></li>
+                    <li><a href="{{ url_for('courses') }}">Курсы</a></li>
+                    <li><a href="{{ url_for('about_us') }}">О нас</a></li>
+                    <li><a href="{{ url_for('contacts') }}">Контакты</a></li>
+                    <li><a href="{{ url_for('my_courses') }}">Мои курсы</a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="{{ url_for('authorization') }}">Выйти из аккаунта</a>
+                <img src="{{ url_for('static', filename='images/Rectangle 46.png') }}" alt="Your Image">
+            </div>
+        </header>
+        <main>
+            <h1 class="about-heading">Наши курсы:</h1>
+            <div class="course-card">
+                <a href="{{ url_for('reg_courses', course_id=1) }}" class="course-link"></a>
+                <div class="course-details">
+                    <h2>Английский язык</h2>
+                    <p class="course-price">От 129 000 рублей</p>
+                    <p class="course-description">Это глобальный язык общения и бизнеса, открывающий двери к бесконечным возможностям по всему миру</p>
+                </div>
+                <div class="course-image">
+                    <img src="{{ url_for('static', filename='images/Rectangle 29.png') }}" alt="Флаг курса">
+                </div>
+            </div>
+            <div class="course-card">
+                <a href="{{ url_for('reg_courses', course_id=2) }}" class="course-link"></a>
+                <div class="course-details">
+                    <h2>Французский язык</h2>
+                    <p class="course-price">От 80 000 рублей</p>
+                    <p class="course-description">Это язык любви, культуры и искусства, который позволяет глубже погрузиться в богатое культурное наследие Франции и франкоговорящих стран.</p>
+                </div>
+                <div class="course-image">
+                    <img src="{{ url_for('static', filename='images/Rectangle 30.png') }}" alt="Флаг курса">
+                </div>
+            </div>
+            <div class="course-card">
+                <a href="{{ url_for('reg_courses', course_id=3) }}" class="course-link"></a>
+                <div class="course-details">
+                    <h2>Испанский язык</h2>
+                    <p class="course-price">От 75 000 рублей</p>
+                    <p class="course-description">Это ключ к страстной культуре и богатым традициям более чем 20 стран мира, объединяя миллионы людей на разных континентах.</p>
+                </div>
+                <div class="course-image">
+                    <img src="{{ url_for('static', filename='images/Rectangle 31.png') }}" alt="Флаг курса">
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>© 2024 TalkTrail</p>
+        </footer>
+    </div>
+</body>
+</html>

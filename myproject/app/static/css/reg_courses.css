@@ -1,0 +1,243 @@
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to right, #F3BD91, #E07F6F, #E89378);
+}
+
+.header-divider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f4e3d2;
+    z-index: -1;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.logout {
+    display: flex;
+    align-items: center;
+}
+
+.logout img {
+    width: 20px;
+    height: auto;
+    margin-left: 10px;
+}
+
+.logout a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #F4E3D2;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background: linear-gradient(to right, #F3BD91, #E07F6F, #E89378);
+    color: black;
+}
+
+.course-selection {
+    margin-bottom: 70px;
+}
+
+.course-selection label,
+.course-selection select {
+    font-size: 32px;
+    display: inline-block;
+    vertical-align: middle; 
+    border-radius: 25px;
+    width: 350px;
+    text-align-last: center;
+}
+
+.course-selection label {
+    margin-right: 10px; 
+}
+
+.course-selection select:focus {
+    outline: none;
+    border-color: #F3BD91;
+}
+
+.duration-container,
+.lesson-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 70px;
+    margin-left: 50px; 
+}
+
+.duration-container label,
+.lesson-container label {
+    font-size: 32px;
+    margin-right: 20px;
+}
+
+.duration-card,
+.lesson-card {
+    background-color: #FFD1B7;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 32px;
+    margin-left: 50px; 
+}
+
+.level-container {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 50px;
+}
+
+.level-container label {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.level-options {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.level-options input[type="radio"] {
+    display: none;
+}
+
+.level-options label {
+    font-size: 28px;
+    margin-right: 20px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 25px;
+}
+
+.level-options #beginner + label {
+    background-color: #99FF75;
+    color: black;
+}
+
+.level-options #intermediate + label {
+    background-color: #FED15E;
+    color: black;
+}
+
+.level-options #advanced + label {
+    background-color: #FF6767;
+    color: black;
+}
+
+.level-options input[type="radio"]:checked + label {
+    border: 2px solid black;
+}
+
+.content-container {
+    display: flex;
+}
+
+.left-content {
+    margin-right: 50px; 
+    margin-left: 80px;
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    
+}
+
+
+.image-container{
+    position: absolute;
+    top: 100px; 
+    right: 100px;
+}
+
+.text-container {
+    position: absolute;
+    top: 646px; 
+    right: 250px;
+}
+
+.image-container img {
+    width: 663px;
+    height: 546px;
+}
+
+
+.text-container p {
+    font-size: 24px;
+}
+
+.text-container p span {
+    color: #E18170;
+}
+
+
+.payment-button-container {
+    display: flex;
+    justify-content: flex-start; 
+    margin-top: 30px; 
+    margin-left: 50px; 
+}
+
+.payment-button-container a {
+    text-decoration: none;
+}
+
+.payment-button {
+    background-color: #F3BD91;
+    color: black;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 200px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.payment-button:hover {
+    background-color: #E07F6F;
+}
